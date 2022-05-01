@@ -15,7 +15,7 @@ const { NotImplementedError } = require("../extensions/index.js");
  */
 
 function transform(arr) {
-  const x = new Error("'arr' parameter must be an instance of the Array!");
+  // const x = new Error("'arr' parameter must be an instance of the Array!");
 
   if (arr == []) {
     return arr;
@@ -46,8 +46,9 @@ function transform(arr) {
     // console.log("arr :>> ", arr);
     // console.log("a :>> ", a);
   } else {
+    throw new Error("'arr' parameter must be an instance of the Array!");
     // console.log("x :> ", x);
-    return x;
+    // return x;
   }
 }
 
@@ -58,7 +59,7 @@ function transform(arr) {
 // transform(["--double-prev", 1, 2, 3]);
 // transform([1, 2, 3, "--double-next"]);
 // transform([1, 2, 3, "--discard-next"]);
-// transform(98789);
+transform(98789);
 // transform([1, 2, 3, "--discard-next", 1337, "--double-prev", 4, 5]);
 // transform([1, 2, 3, "--double-next", 1337, "--double-prev", 4, 5]);
 // transform([1, 2, 3, "--discard-next", 1337, "--discard-prev", 4, 5]);
