@@ -14,26 +14,30 @@ const { NotImplementedError } = require("../extensions/index.js");
  *
  */
 function createDreamTeam(members) {
-  let q = [];
-  // let bool = true;
-  members.forEach((element) => {
-    if (typeof element == "string") {
-      let x = element.trim().split("");
+  if (Array.isArray(members)) {
+    let q = [];
+    // let bool = true;
+    members.forEach((element) => {
+      if (typeof element == "string") {
+        let x = element.trim().split("");
 
-      q.push(x[0].toUpperCase());
-    } else {
-      //   bool = false;
-      return false;
-    }
-  });
-  // console.log("object :>> ", q.sort().join(""));
-  // if (bool == false) {
-  //   return false;
-  // }
-  return q.sort().join("");
+        q.push(x[0].toUpperCase());
+      } else {
+        //   bool = false;
+        return false;
+      }
+    });
+    // console.log("object :>> ", q.sort().join(""));
+    // if (bool == false) {
+    //   return false;
+    // }
+    return q.sort().join("");
+  } else {
+    return false;
+  }
 }
 
-createDreamTeam(["Olivia", 1111, "Lily  poij", "    Oscar ", true, null]);
+// createDreamTeam(["Olivia", 1111, "Lily  poij", "    Oscar ", true, null]);
 
 module.exports = {
   createDreamTeam,
