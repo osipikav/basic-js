@@ -42,24 +42,9 @@ function transform(arr) {
     }
 
     return a;
-
-    // console.log("arr :>> ", arr);
-    // console.log("a :>> ", a);
   }
 }
 
-// transform([1, 2, 3, "--discard-next", 1337, "--discard-prev", 4, 5]);
-// transform(["--discard-prev", 4, 5]);
-// transform([1, 2, 3, "--discard-next", 4, 5]);
-// transform(["--discard-prev", 1, 2, 3]);
-// transform(["--double-prev", 1, 2, 3]);
-// transform([1, 2, 3, "--double-next"]);
-// transform([1, 2, 3, "--discard-next"]);
-// transform(98789);
-// transform([1, 2, 3, "--discard-next", 1337, "--double-prev", 4, 5]);
-// transform([1, 2, 3, "--double-next", 1337, "--double-prev", 4, 5]);
-// transform([1, 2, 3, "--discard-next", 1337, "--discard-prev", 4, 5]);
-// transform([1, 2, 3, "--double-next", 1337, "--discard-prev", 4, 5]);
 module.exports = {
   transform,
 };
