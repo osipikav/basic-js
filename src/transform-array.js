@@ -15,9 +15,11 @@ const { NotImplementedError } = require("../extensions/index.js");
  */
 
 function transform(arr) {
+  if (!Array.isArray(arr))
+    throw new Error(`'arr' parameter must be an instance of the Array!`);
   if (arr == []) {
     return arr;
-  } else if (Array.isArray(arr)) {
+  } else {
     let a = [];
 
     for (let i = 0; i < arr.length; i++) {
@@ -43,10 +45,6 @@ function transform(arr) {
 
     // console.log("arr :>> ", arr);
     // console.log("a :>> ", a);
-  } else {
-    throw new Error("'arr' parameter must be an instance of the Array!");
-    // console.log("x :> ", x);
-    // return x;
   }
 }
 
